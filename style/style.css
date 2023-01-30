@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Arimo:ital,wght@0,700;1,600&family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,500&family=Catamaran:wght@800&family=Finger+Paint&family=Lilita+One&family=Permanent+Marker&family=Roboto:wght@400;700&family=Style+Script&display=swap'); * 
+ {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ li { list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ /* custom styles */
+ :root{
+    /* font style */
+    --font-family: 'Arimo', sans-serif;
+    --arlowSemiCondensed:'Barlow Semi Condensed', sans-serif;
+    --LilitaOne: 'Lilita One', cursive;
+    --PermanentMarker: 'Permanent Marker', cursive;
+    --Roboto: 'Roboto', sans-serif;
+    --StyleScript: 'Style Script', cursive;
+    --catamaranfamily: 'Catamaran', sans-serif;
+    --fingerfamily: 'Finger Paint', cursive;
+
+
+
+  /**
+   * colors
+   */
+
+   --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
+   --rich-black-fogra-29-1: hsl(210, 26%, 11%);
+   --rich-black-fogra-29-2: hsl(210, 50%, 4%);
+   --silver-metallic: hsl(212, 9%, 67%);
+   --coquelicot_20: hsla(12, 98%, 52%, 0.2);
+   --coquelicot_10: hsla(12, 98%, 52%, 0.1);
+   --sonic-silver: hsl(0, 0%, 47%);
+   --cadet-gray: hsl(214, 15%, 62%);
+   --light-gray: hsl(0, 0%, 80%);
+   --coquelicot: hsl(12, 98%, 52%);
+   --gainsboro: hsl(0, 0%, 88%);
+   --white_20: hsl(0, 0%, 100%, 0.2);
+   --white_10: hsl(0, 0%, 100%, 0.1);
+   --black_10: hsl(0, 0%, 0%, 0.1);
+   --white: hsl(0, 0%, 100%);
+ 
+
+  /**
+   * shadow
+   */
+
+   --shadow-1: 0 0 20px var(--black_10);
+   --shadow-2: 0px 10px 24px var(--coquelicot_20);
+
+     /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+ }
+
+
+ body{
+    
+ }
+
+
+ /* header */
+ .header{
+  background-color:var(--white);
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  padding-block: 10px;
+  box-shadow: var(--shadow-1);
+}
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--rich-black-fogra-29-1);
+  font-family: var(--ff-catamaran);
+  font-size: 1.5rem;
+  font-weight: var(--fw-900);
+  display: flex;
+  align-items: center;
+  margin-inline-start: -8px;
+  margin-left: 15px;
+
+}
+.logo img{
+  height: 40px;
+  width: 40px;
+  color: var(--coquelicot);
+  font-size: 40px;
+}
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--font-family);
+  gap: 20px;
+ 
+
+}
+.Register-form{
+    background-color: var(--coquelicot);
+  padding: 15px 15px;
+  width: 200px;
+  border-radius: 1rem;
+  border: none;
+  font-family: var(--font-family);
+  letter-spacing: 2px;
+}
+
+/* hero section */
+.hero
+{
+  
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-repeat:no-repeat ;
+  
+
+}
+.hero-content
+{
+  color: var(--white);
+  padding: 10px;
+  margin-left: 200px;
+}
+.hero-content h1{
+  margin-top: 90px;
+  font-size: 70px;
+  font-family: var(--fingerfamily);
+}
+.hero-content h2{
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: var(--coquelicot);
+}
+.hero-container
+{
+  color: aliceblue;
+}
+.offer-title{
+  margin-top: 60px;
+  margin-left: 100px;
+  font-size: 70px;
+  font-family: var(--fingerfamily);
+}
+/* timer */
+.time
+{   
+    margin-top: 30px;
+    margin-right: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.time div{
+  position: relative;
+  margin: 0 5px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+
+.time div span:first-child{
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.time div span {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 80px;
+  background: #fdfdfd;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+.time div span:nth-child(2)
+{
+
+height: 30px;
+font-size: 0.7em;
+letter-spacing: 0.2em;
+z-index: 9;
+box-shadow: none;
+background: #ffffff;
+text-transform: uppercase;
+}
+.time div:last-child span{
+  background: #ffffff;
+}
+.book-btn{
+  margin-left: 309px;
+  margin-top: 37px;
+  height: 45px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: var(--coquelicot);
+  font-family: var(--font-family);
+  border: none;
+}
+/* classes */
+.class-title{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+
+}
+.class-title h1{
+  margin-top: 74px;
+  color: var(--white);
+  font-size: 40px;
+  padding: 30px;
+  font-family: var(--catamaranfamily);
+  border: 2px solid#fff;
+  border-width: 9px;
+}
+.class-title p {
+  color: var(--white);
+  font-size: 50px;
+  font-family: var(--catamaranfamily);
+}
+.classes{
+  background-image: url(../images/muscular-sportsman-training-with-ropes.jpg);
+  height: 100vh;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.class-card img
+{
+  height: 221px;
+  width: 285px;
+  margin-top: -103px;
+  border-radius: 20px;
+}
+.class-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin-top: 150px;
+      
+
+}
+.class-content>.class-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  background-color: #fdfdfd;
+  height: 158px;
+  width: 283px;
+  border-radius: 20px;
+  
+  
+}
+/* .class-card p{
+  font-size: larger;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px
+} */
+
+
+/* Price List */
+.price-tag{
+  background-color: black;
+  height: 610px;
+  width: 100%px;
+  
+}
+.price-tag2{
+
+color: #fdfdfd;
+}
+.price-tag h1{
+  font-size: 50px;
+  font-family: var(--font-family);
+  text-align: center;
+  padding: 40px 0;
+}
+/* .price-row
+{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap:20px;
+} */
+
+.price-row{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+   margin: 3px 120px 3px 120px;
+  
+}
+.price-col
+{
+  background: linear-gradient(135deg, #150339, #ff0077);
+  border-radius: 10px;
+  color: #fff;
+  height: 370px;
+  width: 300px;
+  padding: 30px;
+
+}
+.price-col h4{
+  font-size: 52px;
+
+}
+.price-col h3{
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+
+}
+.price-col ul{
+  text-align: left;
+  cursor: pointer;
+  margin: 20px 0;
+  color: #ddd;
+  list-style: none;
+
+}
+.price-col ul li{
+  margin: 15px 0;
+}
+.price-col ul li::before{
+  content: '\2020';
+  color: #fff;
+  font-weight: bold;
+  margin-right: 8px;
+
+}
+/* footer */
+.footer-container{
+   height: 40vh;
+   background-color: rgb(0, 0, 0);
+   color: #fff;
+}
+.footer-container p{
+  margin-left: 30px;
+}
+.footer-logo img
+{
+  width: 50px;
+  height: 50px;
+  margin-left: 80px;
+}
+
+.footer-logo
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__form
+{
+  margin-left: 107px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer__input{
+  padding: 20px 56px 20px 24px;
+	border: 2px solid var(--white);
+	background: transparent;
+	color: var(--cadet-gray);
+	outline: none;
+  border-radius: 20px;
+}
+.footer__form .button{
+  height: 70px;
+  border-radius: 30px;
+  font-family: var(--catamaranfamily);
+  width: 150px;
+  
+}
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 575px screen
+ */
+
+ @media (max-width: 768px)
+ {
+  .hero-container{
+    padding: 20px;
+  }
+
+  
+    
+  }
+
+
+
+
+
+
+
+ 
